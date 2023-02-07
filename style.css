@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+* {
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.columns {
+    width: 800px;
+    height: 450px;
+    display: flex;
+}
+
+.column-sedans {
+    background: hsl(31, 77%, 52%);
+    border-radius: 10px 0 0 10px;
+}
+
+.info {
+    padding: 40px;
+}
+
+.info svg {
+    margin-bottom: 30px;
+}
+
+/*
+font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif;
+*/
+
+.info h2 {
+    margin-bottom: 30px;
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 40px;
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+.info p {
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 1.2;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+}
+
+.info button {
+    background: hsl(0, 0%, 95%);
+    width: 160px;
+    height: 45px;
+    border: transparent;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Lexend Deca', sans-serif;
+    color: hsl(184, 100%, 22%);
+    font-size: 15px;
+    margin-top: 70px;
+}
+
+.column-sedans .info button {
+    color: hsl(31, 77%, 52%);
+}
+
+.column-suvs .info button {
+    color: hsl(184, 100%, 22%);
+}
+
+.column-luxury .info button {
+    color: hsl(179, 100%, 13%);
+}
+
+.info button:hover {
+    background: transparent;
+    border: hsl(0, 0%, 95%) 1.5px solid;
+    transition: .2s ease-in-out;
+    color: hsl(0, 0%, 95%);
+}
+
+.column-suvs {
+    background: hsl(184, 100%, 22%);
+}
+
+.column-luxury {
+    background: hsl(179, 100%, 13%);
+    border-radius: 0 10px 10px 0;
+}
+
+.attribution {
+    color: #777;
+    margin-top: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+}
+
+.attribution a {
+    color: hsl(179, 100%, 13%);
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    color: hsl(31, 77%, 52%);
+    transition: .2s ease-in-out;
+}
+
+@media screen and (max-width: 900px) {
+    body {
+        justify-content: normal;
+    }
+
+    .columns {
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        margin: 20px 0;
+    }
+
+    .column-sedans {
+        border-radius: 10px 10px 0 0;
+    }
+
+    .column-luxury {
+        border-radius: 0 0 10px 10px;
+    }
+
+    .attribution {
+        margin-top: 800px;
+        padding-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .columns {
+        width: 300px;
+    }
+
+    .attribution {
+        margin-top: 850px;
+        padding-bottom: 10px;
+    }
+}
